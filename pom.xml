@@ -59,11 +59,13 @@
              it is dependent on transitively
         -->
       <version>${jackson.version.annotations}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
       <version>${jackson.version.core}</version>
+      <scope>provided</scope>
     </dependency>
 
     <!-- and for testing we need a few libraries
@@ -183,6 +185,10 @@
       <plugin>
         <groupId>org.moditect</groupId>
         <artifactId>moditect-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>karaf-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
